@@ -32,6 +32,14 @@ Press P to open the URL to your app. Once you click install, you can start devel
 
 Local development is powered by [the Shopify CLI](https://shopify.dev/docs/apps/tools/cli). It logs into your account, connects to an app, provides environment variables, updates remote config, creates a tunnel and provides commands to generate extensions.
 
+### Styling with Tailwind CSS
+
+Tailwind CSS utilities are available in app components through `app/tailwind.css`.
+For example, use `<div className="flex items-center gap-4">` in a React component.
+Preflight is intentionally omitted to preserve the template's existing styles.
+Utilities style your HTML elements; Shopify web components expose their own
+supported styling options for their internals.
+
 ### Authenticating and querying data
 
 To authenticate and query data you can use the `shopify` const that is exported from `/app/shopify.server.js`:

@@ -149,7 +149,9 @@ export default function Index() {
         Generate a product
       </s-button>
 
-      <p>y'a que nous</p>
+      <div className="flex items-center gap-4 rounded-lg bg-blue-100 p-4">
+        Hello Tailwind
+      </div>
 
       <s-section heading="Congrats on creating a new Shopify app 🎉">
         <s-paragraph>

@@ -41,6 +41,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
     updatedAt: payload.updated_at,
   });
 
+
   // Respond fast (< 5s); do heavy work asynchronously.
   return new Response();
 };
