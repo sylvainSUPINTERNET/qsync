@@ -51,6 +51,7 @@ api_version = "2027-01"
   [[webhooks.subscriptions]]
   uri = "/webhooks/inventory_levels/update"
   topics = [ "inventory_levels/update" ]
+  
 
 [events]
 api_version = "2026-10"

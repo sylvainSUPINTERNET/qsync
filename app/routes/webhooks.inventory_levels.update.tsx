@@ -4,8 +4,15 @@ import { authenticate } from "../shopify.server";
 export const action = async ({ request }: ActionFunctionArgs) => {
   const { shop, topic, payload, admin } = await authenticate.webhook(request);
 
+  console.log(`Webhooks - Received ${topic} webhook for ${shop}`, payload );
+
+
   // admin is undefined if the app was uninstalled (no session left).
-  if (!admin) return new Response();
+  if (!admin) {
+    console.log(`Webhooks - No admin session for ${shop} (admin is undefined if the app was uninstalled (no session left)`);
+    return new Response();
+  }
+
 
   const response = await admin.graphql(
     `#graphql

@@ -139,6 +139,11 @@ export default function Index() {
     if (fetcher.data?.product?.id) {
       shopify.toast.show("Product created");
     }
+  shopify.resourcePicker({
+    "type": "variant",
+    multiple: true
+  })
+
   }, [fetcher.data?.product?.id, shopify]);
 
   const generateProduct = () => fetcher.submit({}, { method: "POST" });
